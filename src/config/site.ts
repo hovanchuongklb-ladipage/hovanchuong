@@ -63,7 +63,7 @@ export const siteConfig = {
   zaloLink: "https://zalo.me/0901440868",
   email: "cskh@noblecrystalriverside.com",
   address: "Đường Đào Trí, Phường Phú Thuận, Quận 7, TP. Hồ Chí Minh",
-  salesOffice: "1A Phạm Viết Chánh, Phường Nguyễn Cư Trinh, Quận 1, TP. Hồ Chí Minh",
+  salesOffice: "422 Đường Đào Trí, Phường Phú Thuận, Quận 7, TP. Hồ Chí Minh",
   developer: "Sunshine Group",
   facebook: "https://facebook.com",
   youtube: "https://youtube.com",
