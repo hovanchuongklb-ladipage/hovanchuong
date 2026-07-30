@@ -7,39 +7,40 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      // "Ngọc Lục Bảo & Đồng Cổ" (emerald & antique copper) — a distinct
-      // palette from the base boilerplate's navy/gold for this clone. Token
-      // names (`navy`, `gold`) are kept as-is so every component's existing
-      // `bg-navy-950` / `text-gold-400` classes keep working unchanged; only
-      // the hex values differ, so recoloring a future clone is always a
-      // config-only change here, never a per-component edit.
+      // Deep teal-green + warm bronze-gold — matches the actual Noble Crystal
+      // Riverside brand materials (logo, floor-plate headers, chiết khấu
+      // graphic all use this dark teal/gold pairing), distinct from both the
+      // base boilerplate's navy/gold and the Chau Thanh Vuong clone's
+      // emerald/copper this project was cloned from. Token names (`navy`,
+      // `gold`) are kept as-is so every component's existing
+      // `bg-navy-950` / `text-gold-400` classes keep working unchanged.
       colors: {
         navy: {
-          DEFAULT: "#04231c",
-          50: "#e8f4f0",
-          100: "#c3e1d6",
-          200: "#8cc4ac",
-          300: "#59a482",
-          400: "#357d5f",
-          500: "#245f47",
-          600: "#1a4735",
-          700: "#143627",
-          800: "#0e2a1e",
-          900: "#0a2118",
-          950: "#04120d",
+          DEFAULT: "#0c2e2f",
+          50: "#e8f2f2",
+          100: "#c5dfe0",
+          200: "#8fc0c2",
+          300: "#5a9fa2",
+          400: "#357779",
+          500: "#215c5e",
+          600: "#194648",
+          700: "#143738",
+          800: "#0f2c2d",
+          900: "#0c2426",
+          950: "#061516",
         },
         gold: {
-          DEFAULT: "#c8823f",
-          50: "#fbf1e6",
-          100: "#f2dcbd",
-          200: "#e4bd84",
-          300: "#d59f57",
-          400: "#c8823f",
-          500: "#b56d31",
-          600: "#925627",
-          700: "#70421e",
-          800: "#4d2d15",
-          900: "#33200f",
+          DEFAULT: "#c19a5b",
+          50: "#faf3e7",
+          100: "#f1e0c0",
+          200: "#e3c68c",
+          300: "#d4ac5e",
+          400: "#c19a5b",
+          500: "#ab8244",
+          600: "#8a6836",
+          700: "#6b5029",
+          800: "#4a381c",
+          900: "#302511",
         },
       },
       // Font variables come from next/font/google in src/app/layout.tsx (Lora

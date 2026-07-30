@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 import { LeadForm } from "@/components/LeadForm";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { siteConfig } from "@/config/site";
 
 const SESSION_STORAGE_KEY = "hasSeenEntryPopup";
 const POPUP_DELAY_MS = 3000;
@@ -41,12 +42,12 @@ export function EntryPopup() {
       <DialogContent title="Ưu Đãi Chào Mừng Đặc Biệt">
         <div className="mt-2 flex items-center gap-2 text-sm text-gold-300">
           <Gift className="h-5 w-5 shrink-0" />
-          Nhận ngay bảng giá & chính sách chiết khấu mới nhất từ Sunshine Sky City
+          Nhận ngay bảng giá & chính sách chiết khấu mới nhất từ {siteConfig.name}
         </div>
         <p className="mt-3 text-sm leading-relaxed text-white/70">
           Để lại thông tin ngay hôm nay để nhận tư vấn ưu tiên và cập nhật sớm nhất
           các chính sách bán hàng, chiết khấu đặc quyền dành cho khách hàng đăng ký
-          sớm tại Sunshine Sky City.
+          sớm tại {siteConfig.name}.
         </p>
         <div className="mt-5">
           <LeadForm

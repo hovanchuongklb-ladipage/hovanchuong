@@ -1,7 +1,6 @@
 import { Facebook, Mail, MapPin, Phone, Youtube } from "lucide-react";
-import Image from "next/image";
 
-import { asset, siteConfig } from "@/config/site";
+import { siteConfig } from "@/config/site";
 
 export function Footer() {
   return (
@@ -9,15 +8,11 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 md:grid-cols-3 lg:px-8">
         <div>
           <div className="flex items-center gap-2">
-            <Image
-              src={asset(siteConfig.images.logo)}
-              alt={siteConfig.name}
-              width={56}
-              height={56}
-              className="h-12 w-12 object-contain"
-            />
+            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-gold-400 font-display text-sm font-bold text-gold-400">
+              N
+            </span>
             <span className="font-display text-lg font-bold text-white">
-              {siteConfig.name}
+              {siteConfig.name.toUpperCase()}
             </span>
           </div>
           <p className="mt-4 text-sm leading-relaxed text-white/60">

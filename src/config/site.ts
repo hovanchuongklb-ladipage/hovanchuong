@@ -51,63 +51,60 @@ export interface TowerFloorPlateItem {
 }
 
 export const siteConfig = {
-  name: "Sunshine Sky City",
-  shortName: "Sunshine Sky City Quận 7",
+  name: "Noble Crystal Riverside",
+  shortName: "Noble Crystal Riverside Quận 7",
   description:
-    "Sunshine Sky City - Tái định nghĩa chuẩn sống tầm cao mới giữa lòng Quận 7, TP. Hồ Chí Minh. Chuẩn sống 5 sao Smart Compound đẳng cấp quốc tế.",
-  // This clone owns its own standalone domain in Vercel (chauthanhvuong.site)
-  // — no gateway/rewrite project involved, unlike the base boilerplate.
-  // basePath is still set because the site is meant to live at /skycity on
-  // that domain, not at the domain root. Keep this in sync with
-  // next.config.mjs's basePath.
-  url: "https://chauthanhvuong.site/skycity",
-  basePath: "/skycity",
-  hotline: "0901841064",
-  hotlineDisplay: "0901.841.064",
-  zaloNumber: "0901841064",
-  zaloLink: "https://zalo.me/0901841064",
-  email: "cskh@canhoquan7.site",
-  address: "Ngã tư Phú Thuận & Huỳnh Tấn Phát, Phường Tân Phú, Quận 7, TP. Hồ Chí Minh",
+    "Noble Crystal Riverside - Tổ hợp căn hộ 4.0 ven sông tại Nam Sài Gòn (Quận 7), phát triển bởi Sunshine Group. Không gian nghỉ dưỡng hình số 8 độc bản trên trục đường Đào Trí, liền kề Phú Mỹ Hưng.",
+  // No custom domain/deployment target has been provided for this project
+  // yet — basePath is empty (site lives at the domain root) and `url` is a
+  // placeholder. Update both together (plus next.config.mjs's basePath)
+  // once a real domain or Vercel URL exists; see CLAUDE.md "Deployment
+  // notes" for what else needs updating alongside these two.
+  url: "https://noble-crystal-riverside.vercel.app",
+  basePath: "",
+  hotline: "0901440868",
+  hotlineDisplay: "0901.440.868",
+  zaloNumber: "0901440868",
+  zaloLink: "https://zalo.me/0901440868",
+  email: "cskh@noblecrystalriverside.com",
+  address: "Đường Đào Trí, Phường Phú Thuận, Quận 7, TP. Hồ Chí Minh",
   salesOffice: "1A Phạm Viết Chánh, Phường Nguyễn Cư Trinh, Quận 1, TP. Hồ Chí Minh",
   developer: "Sunshine Group",
   facebook: "https://facebook.com",
   youtube: "https://youtube.com",
   // Top-to-bottom render order of the page sections inside <main> — see
-  // `sectionComponents` in src/app/page.tsx. Deliberately reordered from the
-  // base boilerplate's Hero/ProjectInfo/Location/... sequence to give this
-  // clone a distinct browsing flow while reusing the exact same components.
+  // `sectionComponents` in src/app/page.tsx.
   layoutOrder: [
     "Hero",
-    "GoldValues",
-    "Amenities",
+    "ProjectInfo",
     "Location",
+    "Amenities",
+    "GoldValues",
     "ApartmentDesign",
     "FloorPlan",
-    "ProjectInfo",
     "Pricing",
   ] as SectionKey[],
   // Every local image path a component needs, grouped by the section that
-  // consumes it. All local paths point into public/images/chau-thanh-vuong/
-  // — a folder created specifically for this clone so its photography never
-  // collides with the base boilerplate's public/images/*.jpg. The files
-  // currently in that folder are copies of the boilerplate renders acting as
-  // working placeholders; drop in this project's real photos under the same
-  // filenames (see public/images/chau-thanh-vuong/README.txt) and no code
-  // changes are needed.
+  // consumes it. All local paths point into
+  // public/images/noble-crystal-riverside/ — every file there is a real
+  // Noble Crystal Riverside asset (sourced from noblecrystalriverside.vn),
+  // no boilerplate placeholders. Several sections intentionally reuse the
+  // same handful of real images (there is no dedicated photo per amenity/
+  // gold-value yet) — see README.txt in that folder for the full mapping
+  // and what a follow-up photo drop should replace.
   images: {
-    logo: "/images/chau-thanh-vuong/logo-sky-city-1.png",
-    hero: "/images/chau-thanh-vuong/hero-twilight-riverside.jpg",
-    location: "/images/chau-thanh-vuong/location-map.jpg",
+    hero: "/images/noble-crystal-riverside/tong-mat-bang.jpg",
+    location: "/images/noble-crystal-riverside/ha-tang-giao-thong.jpg",
     apartmentDesign: {
-      living: "/images/chau-thanh-vuong/interior-living-piano.jpg",
-      kitchen: "/images/chau-thanh-vuong/interior-kitchen-dining.jpg",
+      living: "/images/noble-crystal-riverside/layout-2pn.jpg",
+      kitchen: "/images/noble-crystal-riverside/layout-3pn.jpg",
     },
-    pricing: "/images/chau-thanh-vuong/towers-dusk-riverside.jpg",
+    pricing: "/images/noble-crystal-riverside/chiet-khau-thanh-toan.jpg",
     goldValues: {
-      smartHome: "/images/chau-thanh-vuong/smart-home-tech.jpg",
-      greenLiving: "/images/chau-thanh-vuong/amenity-fountain-walkway.jpg",
-      luxuryInterior: "/images/chau-thanh-vuong/interior-living-piano.jpg",
-      security: "/images/chau-thanh-vuong/amenity-retail-podium.jpg",
+      smartHome: "/images/noble-crystal-riverside/ha-tang-giao-thong.jpg",
+      greenLiving: "/images/noble-crystal-riverside/tong-mat-bang.jpg",
+      luxuryInterior: "/images/noble-crystal-riverside/layout-5pn.jpg",
+      security: "/images/noble-crystal-riverside/chiet-khau-thanh-toan.jpg",
     },
   },
   // Array-based sections: each item is a self-contained card (icon key,
@@ -115,183 +112,162 @@ export const siteConfig = {
   // adding/removing/reordering a card is purely a config edit, the
   // components (Amenities.tsx, FloorPlan.tsx) just map over these arrays.
   sections: {
+    // No dedicated close-up amenity photography exists for this project yet
+    // (only the master site plan showing amenity zones A-L) — every card
+    // below temporarily shares tong-mat-bang.jpg until individual photos
+    // (pool, gym, retail, playground) are available.
     amenities: [
       {
         icon: "pool",
-        title: "Hồ bơi vô cực Rooftop chuẩn Resort",
+        title: "Hồ bơi vô cực hình số 8 độc bản",
         description:
-          "Hồ bơi tràn bờ trên cao, phóng tầm mắt toàn cảnh thành phố, mang chuẩn nghỉ dưỡng 5 sao.",
-        image: "/images/chau-thanh-vuong/amenity-pool-rooftop.jpg",
-      },
-      {
-        icon: "restaurant",
-        title: "Nhà hàng sang trọng",
-        description:
-          "Không gian ẩm thực đẳng cấp ngay trong nội khu, phục vụ cư dân theo tiêu chuẩn khách sạn 5 sao.",
-        image: "/images/chau-thanh-vuong/amenity-restaurant.jpg",
+          "Đường bơi vô cực uốn lượn hình số 8 xuyên suốt toàn khu, chuẩn nghỉ dưỡng resort ngay tại nội khu.",
+        image: "/images/noble-crystal-riverside/tong-mat-bang.jpg",
       },
       {
         icon: "gym",
-        title: "Phòng Gym & Yoga Fitness",
+        title: "Sân tennis & khu thể thao ngoài trời",
         description:
-          "Trung tâm thể chất hiện đại, trang bị đầy đủ dụng cụ tập luyện tiêu chuẩn quốc tế.",
-        image: "/images/chau-thanh-vuong/amenity-gym.jpg",
-      },
-      {
-        icon: "mall",
-        title: "Trung tâm thương mại nội khu",
-        description:
-          "Hệ tiện ích thương mại – dịch vụ ngay chân đế, đáp ứng mọi nhu cầu cư dân.",
-        image: "/images/chau-thanh-vuong/amenity-retail-podium.jpg",
+          "Sân tennis tiêu chuẩn cùng các khu tập luyện ngoài trời bố trí xen kẽ mảng xanh cảnh quan.",
+        image: "/images/noble-crystal-riverside/tong-mat-bang.jpg",
       },
       {
         icon: "park",
-        title: "Khu vui chơi trẻ em ngoài trời",
+        title: "Vườn cảnh quan & hồ sinh thái nội khu",
         description:
-          "Sân chơi liên hoàn dưới tán cây xanh mát, dành riêng cho các thiên thần nhỏ của gia đình.",
-        image: "/images/chau-thanh-vuong/amenity-kids-playground.jpg",
+          "Hệ thống hồ cảnh quan, vườn dạo bộ và tiểu cảnh trải dài theo toàn bộ trục hình số 8 của dự án.",
+        image: "/images/noble-crystal-riverside/tong-mat-bang.jpg",
+      },
+      {
+        icon: "mall",
+        title: "Quảng trường & khu thương mại nội khu",
+        description:
+          "Quảng trường trung tâm và các tiện ích thương mại – dịch vụ ngay chân đế, đáp ứng nhu cầu cư dân.",
+        image: "/images/noble-crystal-riverside/tong-mat-bang.jpg",
+      },
+      {
+        icon: "restaurant",
+        title: "Khu vực sinh hoạt cộng đồng",
+        description:
+          "Không gian sinh hoạt chung, sân chơi trẻ em và khu vực thư giãn bố trí quanh các đảo cảnh quan A-L.",
+        image: "/images/noble-crystal-riverside/tong-mat-bang.jpg",
       },
       {
         icon: "security",
-        title: "An ninh 24/7 công nghệ Smart Living",
+        title: "An ninh 24/7 khép kín toàn khu",
         description:
-          "Hệ thống nhận diện khuôn mặt, kiểm soát ra vào thông minh cho từng căn hộ.",
-        // Already an absolute external URL (Unsplash placeholder) — asset()
-        // passes it through unchanged, same as every other external image.
-        image:
-          "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1200&q=80",
+          "Hệ thống kiểm soát ra vào và an ninh 24/7 khép kín cho toàn bộ chu vi hình số 8 của dự án.",
+        image: "/images/noble-crystal-riverside/tong-mat-bang.jpg",
       },
     ] as AmenityItem[],
+    // Single typical floor plan (mặt bằng điển hình) — this project is one
+    // continuous block (unit codes C1-C10), not multiple named towers like
+    // the base boilerplate's S2/S3/S4, so there is only one entry here.
     floorPlans: [
       {
-        id: "s2",
-        name: "Tòa S2",
-        image: "/images/chau-thanh-vuong/hero-aerial-day.jpg",
-        specs: "356 sản phẩm • 108 căn hộ • 10 Sky Villa • 238 văn phòng đa năng",
+        id: "dien-hinh",
+        name: "Toàn Dự Án",
+        image: "/images/noble-crystal-riverside/mat-bang-dien-hinh.jpg",
+        specs: "10 căn/tầng · Lầu 2-19, 22-35 · Cao 37 tầng",
         stats: [
-          { label: "Tổng sản phẩm", value: "356" },
-          { label: "Căn hộ", value: "108" },
-          { label: "Sky Villa", value: "10" },
-          { label: "Văn phòng đa năng", value: "238" },
-        ],
-      },
-      {
-        id: "s3",
-        name: "Tòa S3",
-        image: "/images/chau-thanh-vuong/towers-dusk-riverside.jpg",
-        specs: "379 sản phẩm • 108 căn hộ • 9 Sky Villa • 262 văn phòng đa năng",
-        stats: [
-          { label: "Tổng sản phẩm", value: "379" },
-          { label: "Căn hộ", value: "108" },
-          { label: "Sky Villa", value: "9" },
-          { label: "Văn phòng đa năng", value: "262" },
-        ],
-      },
-      {
-        id: "s4",
-        name: "Tòa S4",
-        image: "/images/chau-thanh-vuong/towers-street-day.jpg",
-        specs: "385 sản phẩm • 108 căn hộ • 12 Sky Villa • 265 văn phòng đa năng",
-        stats: [
-          { label: "Tổng sản phẩm", value: "385" },
-          { label: "Căn hộ", value: "108" },
-          { label: "Sky Villa", value: "12" },
-          { label: "Văn phòng đa năng", value: "265" },
+          { label: "Số căn / tầng", value: "10" },
+          { label: "Loại căn hộ", value: "2-3 PN" },
+          { label: "Thông thủy từ", value: "~104 m²" },
+          { label: "Tầng cao nhất", value: "37" },
         ],
       },
     ] as FloorPlanItem[],
     // Individual apartment layouts (mặt bằng theo loại căn hộ). `image` is
-    // the floor-plan diagram; `gallery` holds real interior sample photos
-    // for that unit type (can be empty — 4PN has no staged photos yet).
+    // the 3D floor-plan render; `gallery` holds real staged interior photos
+    // (empty for all four here — none provided yet for this project).
     apartmentTypes: [
       {
         id: "2pn",
         name: "Căn hộ 2 Phòng ngủ",
-        image: "/images/chau-thanh-vuong/floorplan-2pn.jpg",
-        areaThongThuy: "61 ~ 68 m²",
-        areaTimTuong: "69 ~ 77 m²",
-        gallery: [
-          "/images/chau-thanh-vuong/floorplan-2pn-living.jpg",
-          "/images/chau-thanh-vuong/floorplan-2pn-bedroom.jpg",
-        ],
+        image: "/images/noble-crystal-riverside/layout-2pn.jpg",
+        areaThongThuy: "104,4 ~ 116,6 m²",
+        areaTimTuong: "116,2 ~ 129,0 m²",
+        gallery: [],
       },
       {
         id: "3pn",
         name: "Căn hộ 3 Phòng ngủ",
-        image: "/images/chau-thanh-vuong/floorplan-3pn.jpg",
-        areaThongThuy: "95 ~ 102 m²",
-        areaTimTuong: "105 ~ 113 m²",
-        gallery: [
-          "/images/chau-thanh-vuong/floorplan-3pn-living.jpg",
-          "/images/chau-thanh-vuong/floorplan-3pn-bedroom.jpg",
-        ],
+        image: "/images/noble-crystal-riverside/layout-3pn.jpg",
+        areaThongThuy: "141,0 ~ 141,9 m²",
+        areaTimTuong: "155,0 m²",
+        gallery: [],
       },
       {
         id: "4pn",
-        name: "Căn hộ 4 Phòng ngủ",
-        image: "/images/chau-thanh-vuong/floorplan-4pn.jpg",
-        areaThongThuy: "102 ~ 132 m²",
-        areaTimTuong: "114 ~ 148 m²",
+        name: "Sky Villa 4 Phòng ngủ (Duplex 2 tầng)",
+        image: "/images/noble-crystal-riverside/layout-4pn.jpg",
+        areaThongThuy: "214,3 m² (2 tầng)",
+        areaTimTuong: "252,0 m²",
+        gallery: [],
+      },
+      {
+        id: "5pn",
+        name: "Sky Villa 5 Phòng ngủ (Duplex 2 tầng)",
+        image: "/images/noble-crystal-riverside/layout-5pn.jpg",
+        areaThongThuy: "Liên hệ để nhận thông tin chi tiết",
+        areaTimTuong: "Liên hệ để nhận thông tin chi tiết",
         gallery: [],
       },
     ] as ApartmentTypeItem[],
-    // Per-tower, per-floor-range floor plates (mặt bằng tầng).
+    // Per-floor-range floor plates (mặt bằng tầng) — one continuous block,
+    // so every entry shares the same `tower` label; `floorRange` is what
+    // distinguishes each card. Floors 35-37 are the Sky Garden / Sky Villa
+    // levels at the top of the building.
     towerFloorPlates: [
       {
-        id: "v7-24-34",
-        tower: "Tòa V7",
-        floorRange: "Tầng 24 - 26, 28 - 34",
-        image: "/images/chau-thanh-vuong/floorplate-v7-tang24-34.jpg",
+        id: "tang2-5",
+        tower: "Noble Crystal Riverside",
+        floorRange: "Tầng 2 - 5",
+        image: "/images/noble-crystal-riverside/floorplate-tang2-5.jpg",
       },
       {
-        id: "v7-12-23",
-        tower: "Tòa V7",
-        floorRange: "Tầng 12, 14 - 23",
-        image: "/images/chau-thanh-vuong/floorplate-v7-tang12-23.jpg",
+        id: "tang6-14",
+        tower: "Noble Crystal Riverside",
+        floorRange: "Tầng 6 - 14",
+        image: "/images/noble-crystal-riverside/floorplate-tang6-14.jpg",
       },
       {
-        id: "v8-12-23",
-        tower: "Tòa V8",
-        floorRange: "Tầng 12, 14 - 23",
-        image: "/images/chau-thanh-vuong/floorplate-v8-tang12-23.jpg",
+        id: "tang35",
+        tower: "Noble Crystal Riverside",
+        floorRange: "Tầng 35 (Sky Garden)",
+        image: "/images/noble-crystal-riverside/floorplate-tang35.jpg",
       },
       {
-        id: "v8-24-34",
-        tower: "Tòa V8",
-        floorRange: "Tầng 24 - 26, 28 - 34",
-        image: "/images/chau-thanh-vuong/floorplate-v8-tang24-34.jpg",
+        id: "tang36",
+        tower: "Noble Crystal Riverside",
+        floorRange: "Tầng 36 (Sky Villas & Sky Garden)",
+        image: "/images/noble-crystal-riverside/floorplate-tang36.jpg",
       },
       {
-        id: "v9-15-24",
-        tower: "Tòa V9",
-        floorRange: "Tầng 15 - 24",
-        image: "/images/chau-thanh-vuong/floorplate-v9-tang15-24.jpg",
-      },
-      {
-        id: "v9-25-34",
-        tower: "Tòa V9",
-        floorRange: "Tầng 25 - 34",
-        image: "/images/chau-thanh-vuong/floorplate-v9-tang25-34.jpg",
+        id: "tang37",
+        tower: "Noble Crystal Riverside",
+        floorRange: "Tầng 37 (Sky Villas & Sky Garden)",
+        image: "/images/noble-crystal-riverside/floorplate-tang37.jpg",
       },
     ] as TowerFloorPlateItem[],
   },
   seo: {
-    title: "Sunshine Sky City Quận 7 - Tái Định Nghĩa Chuẩn Sống Tầm Cao Mới",
+    title: "Noble Crystal Riverside Quận 7 - Tổ Hợp Căn Hộ 4.0 Ven Sông Nam Sài Gòn",
     keywords: [
-      "Sunshine Sky City",
-      "Sunshine Sky City Quận 7",
-      "căn hộ Quận 7",
+      "Noble Crystal Riverside",
+      "Noble Crystal Riverside Quận 7",
+      "căn hộ Đào Trí",
       "Sunshine Group",
-      "Sunshine Homes",
+      "căn hộ Nam Sài Gòn",
       "căn hộ Phú Mỹ Hưng",
       "chung cư Quận 7",
       "Sky Villa Quận 7",
-      "bảng giá Sunshine Sky City",
+      "bảng giá Noble Crystal Riverside",
     ],
-    // Full absolute URL (not a root-relative path) — a leading "/" here
-    // would resolve against the domain root and silently drop the
-    // /skycity prefix when combined with metadataBase.
-    ogImage: "https://chauthanhvuong.site/skycity/images/chau-thanh-vuong/hero-twilight-riverside.jpg",
+    // Full absolute URL (not a root-relative path) — see asset()/basePath
+    // note below; update once a real domain replaces the Vercel placeholder
+    // above.
+    ogImage: "https://noble-crystal-riverside.vercel.app/images/noble-crystal-riverside/tong-mat-bang.jpg",
   },
   nav: [
     { label: "Tổng quan", href: "#tong-quan" },
@@ -312,7 +288,9 @@ export type SiteConfig = typeof siteConfig;
  * `next/image` `src` values for local images — those must be prefixed
  * manually, or the image optimizer's internal lookup 404s once basePath is
  * set. Absolute URLs (external images, e.g. Unsplash placeholders) are
- * returned unchanged.
+ * returned unchanged. With `basePath: ""` this is currently a no-op, but
+ * every local image still goes through it so nothing breaks if this project
+ * later moves under a subpath.
  */
 export function asset(path: string): string {
   if (/^https?:\/\//.test(path)) {

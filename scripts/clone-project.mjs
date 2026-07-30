@@ -20,7 +20,15 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
-const EXCLUDED_ENTRIES = new Set(["node_modules", ".next", ".git", "out", ".env.local"]);
+const EXCLUDED_ENTRIES = new Set([
+  "node_modules",
+  ".next",
+  ".git",
+  "out",
+  ".env.local",
+  ".vercel",
+  "tsconfig.tsbuildinfo",
+]);
 
 function toKebabCase(input) {
   return input

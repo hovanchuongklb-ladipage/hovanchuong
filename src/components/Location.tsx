@@ -6,12 +6,12 @@ import Image from "next/image";
 import { asset, siteConfig } from "@/config/site";
 
 const distances = [
-  { place: "Crescent Mall & Vivo City", time: "4 - 12 phút" },
-  { place: "Hồ Bán Nguyệt & Cầu Ánh Sao", time: "5 phút" },
-  { place: "Bệnh viện FV & Tim Tâm Đức", time: "5 - 6 phút" },
-  { place: "Trường Quốc tế Nhật Bản, Hàn Quốc, Đài Loan", time: "4 phút" },
-  { place: "Trường Quốc tế RMIT", time: "13 phút" },
-  { place: "Trung tâm Tài chính Thủ Thiêm", time: "~20 phút" },
+  { place: "Cao tốc Bến Lức - Long Thành & Vành đai 3", time: "Hoàn thành" },
+  { place: "Đường trên cao Nguyễn Hữu Thọ & Nguyễn Văn Linh", time: "Khởi công" },
+  { place: "Cầu Thủ Thiêm 4 & Metro Bến Thành - Cần Giờ", time: "Hoàn thành" },
+  { place: "Cầu Phú Mỹ 2 & Cầu Cần Giờ", time: "Hoàn thành" },
+  { place: "Metro số 4 (Hiệp Phước - Đồng Thạnh)", time: "Khởi công" },
+  { place: "Sân bay Quốc tế Long Thành", time: "Hoàn thành" },
 ];
 
 export function Location() {
@@ -20,16 +20,16 @@ export function Location() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-xs font-bold uppercase tracking-[0.3em] text-gold-400">
-            Vị trí kim cương
+            Động lực tăng trưởng Quận 7
           </span>
           <h2 className="mt-3 font-display text-2xl font-bold text-white sm:text-4xl">
-            Kết Nối Trọn Vẹn Giữa Lòng Quận 7
+            Hạ Tầng Khu Nam Tăng Tốc 2026 - 2030
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-white/70 sm:text-base">
-            Sunshine Sky City tọa lạc ngay nút giao ngã tư đường Phú Thuận &amp; Huỳnh
-            Tấn Phát, Phường Tân Phú, Quận 7 — liền kề khu đô thị Phú Mỹ Hưng,
-            hợp long 2 nhánh sông Cả Cấm, sở hữu thế đất &ldquo;kề sông cận thủy&rdquo;
-            hiếm có.
+            {siteConfig.name} tọa lạc trên trục đường Đào Trí, Phường Phú Thuận,
+            Quận 7 — liền kề khu đô thị Phú Mỹ Hưng, đón đầu làn sóng hạ tầng
+            &ldquo;hạ tầng đi trước, bất động sản tăng giá theo sau&rdquo; của
+            khu Nam Sài Gòn.
           </p>
         </div>
 
@@ -37,7 +37,7 @@ export function Location() {
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-gold-500/20 bg-white shadow-2xl lg:col-span-3">
             <Image
               src={asset(siteConfig.images.location)}
-              alt="Bản đồ liên kết vùng khu vực Quận 7 quanh Sunshine Sky City"
+              alt="Hạ tầng khu Nam tăng tốc 2026-2030 quanh Noble Crystal Riverside"
               fill
               sizes="(min-width: 1024px) 60vw, 100vw"
               className="object-contain"
@@ -45,7 +45,7 @@ export function Location() {
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-950/80 to-transparent px-4 pb-4 pt-10">
               <div className="inline-flex items-center gap-2 rounded-full bg-navy-950/80 px-4 py-2 text-xs font-semibold text-white backdrop-blur-sm sm:text-sm">
                 <MapPin className="h-4 w-4 text-gold-400" />
-                Ngã tư Phú Thuận &amp; Huỳnh Tấn Phát, Quận 7, TP.HCM
+                Đường Đào Trí, Phường Phú Thuận, Quận 7, TP.HCM
               </div>
             </div>
           </div>

@@ -10,7 +10,7 @@ export function Hero() {
     <section id="tong-quan" className="relative flex min-h-[100svh] w-full items-center overflow-hidden bg-navy-950">
       <Image
         src={asset(siteConfig.images.hero)}
-        alt="Sunshine Sky City - Toàn cảnh dự án ven sông Quận 7"
+        alt="Noble Crystal Riverside - Tổng mặt bằng dự án hình số 8 ven sông Quận 7"
         fill
         priority
         sizes="100vw"
@@ -21,17 +21,17 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-4 pt-20 text-center sm:px-6">
         <span className="rounded-full border border-gold-400/60 bg-navy-950/40 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-gold-300 sm:text-sm">
-          Smart Compound Đẳng Cấp Quận 7
+          Tổ Hợp Căn Hộ 4.0 Ven Sông Nam Sài Gòn
         </span>
 
         <h1 className="mt-6 font-display text-3xl font-bold leading-tight text-white drop-shadow-lg sm:text-5xl md:text-6xl">
-          Tái Định Nghĩa
-          <span className="block text-gold-400">Chuẩn Sống Tầm Cao Mới</span>
+          Không Gian Nghỉ Dưỡng
+          <span className="block text-gold-400">Hình Số 8 Độc Bản</span>
         </h1>
 
         <p className="mt-5 max-w-2xl text-sm leading-relaxed text-white/85 sm:text-base md:text-lg">
-          {siteConfig.name} tọa lạc ngay nút giao ngã tư Phú Thuận &amp; Huỳnh Tấn Phát,
-          liền kề Phú Mỹ Hưng — kiến tạo phong cách sống thượng lưu giữa lòng
+          {siteConfig.name} tọa lạc trên trục đường Đào Trí, Phường Phú Thuận,
+          liền kề Phú Mỹ Hưng — phát triển bởi Sunshine Group giữa lòng
           Quận 7, TP. Hồ Chí Minh.
         </p>
 
@@ -53,10 +53,10 @@ export function Hero() {
 
         <dl className="mt-12 grid w-full max-w-3xl grid-cols-2 gap-4 border-t border-white/15 pt-8 sm:grid-cols-4">
           {[
-            { label: "Quy mô dự án", value: "4,2 ha" },
-            { label: "Tổng số căn", value: "3.140+" },
-            { label: "Số tầng", value: "9 - 38 tầng" },
-            { label: "Bàn giao", value: "T12/2023" },
+            { label: "Vị trí", value: "Đảo Trí, Quận 7" },
+            { label: "Số căn / tầng", value: "10 căn" },
+            { label: "Loại hình", value: "2-5PN & Sky Villa" },
+            { label: "Số tầng", value: "37 tầng" },
           ].map((item) => (
             <div key={item.label} className="flex flex-col items-center">
               <dt className="text-[11px] uppercase tracking-wide text-white/60 sm:text-xs">

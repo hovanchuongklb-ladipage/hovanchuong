@@ -1,3 +1,5 @@
+import { siteConfig } from "@/config/site";
+
 interface TelegramLeadPayload {
   fullName: string;
   phone: string;
@@ -15,11 +17,11 @@ export async function sendTelegramNotification(lead: TelegramLeadPayload) {
   }
 
   const text = [
-    "🔥 CÓ KHÁCH MỚI - SUNSHINE SKY CITY",
+    `🔥 CÓ KHÁCH MỚI - ${siteConfig.name.toUpperCase()}`,
     `👤 Tên: ${lead.fullName}`,
     `📞 SĐT: ${lead.phone}`,
     lead.email ? `✉️ Email: ${lead.email}` : null,
-    `🌐 Nguồn: ${lead.source ?? "Landing page Sunshine Sky City"}`,
+    `🌐 Nguồn: ${lead.source ?? `Landing page ${siteConfig.name}`}`,
   ]
     .filter(Boolean)
     .join("\n");

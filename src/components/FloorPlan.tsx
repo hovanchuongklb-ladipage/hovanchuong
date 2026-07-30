@@ -183,8 +183,9 @@ export function FloorPlan() {
             Cơ Cấu Loại Hình & Mặt Bằng Chi Tiết
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-white/70 sm:text-base">
-            Tổng diện tích dự án 4,2 ha với 3.140 sản phẩm gồm Văn phòng đa năng, Căn
-            hộ và Sky Villa, phân bổ trên 3 tòa tháp cao 9 – 38 tầng.
+            Khối đế hình số 8 cao 37 tầng, mỗi tầng điển hình bố trí 10 căn hộ 2 - 3
+            phòng ngủ, riêng các tầng 35 - 37 dành cho dòng sản phẩm Sky Villa và
+            Sky Garden duplex.
           </p>
         </div>
 

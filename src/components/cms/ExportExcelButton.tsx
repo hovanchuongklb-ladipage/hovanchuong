@@ -4,7 +4,15 @@ import { FileDown } from "lucide-react";
 import * as XLSX from "xlsx";
 
 import { useToast } from "@/components/ui/toast";
+import { siteConfig } from "@/config/site";
 import type { LeadRow } from "@/lib/supabase-admin";
+
+const PROJECT_SLUG = siteConfig.name
+  .toLowerCase()
+  .normalize("NFD")
+  .replace(new RegExp("[\\u0300-\\u036f]", "g"), "")
+  .replace(/[^a-z0-9]+/g, "-")
+  .replace(/^-+|-+$/g, "");
 
 interface ExportExcelButtonProps {
   data: LeadRow[];
@@ -48,7 +56,7 @@ export function ExportExcelButton({ data }: ExportExcelButtonProps) {
       XLSX.utils.book_append_sheet(workbook, worksheet, "Leads");
 
       const timestamp = new Date().toISOString().slice(0, 10);
-      XLSX.writeFile(workbook, `sunshine-sky-city-leads-${timestamp}.xlsx`);
+      XLSX.writeFile(workbook, `${PROJECT_SLUG}-leads-${timestamp}.xlsx`);
     } catch (error) {
       console.error("Lỗi xuất file Excel:", error);
       showToast(

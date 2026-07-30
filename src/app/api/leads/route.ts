@@ -43,7 +43,7 @@ export async function POST(request: Request) {
       email: email || null,
       wants_info: wantsInfo ?? true,
       wants_tour: wantsTour ?? false,
-      source: source ?? "Landing page Sunshine Sky City",
+      source: source ?? "Landing page Noble Crystal Riverside",
     });
 
     if (error) {

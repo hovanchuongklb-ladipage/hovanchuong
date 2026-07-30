@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-const REALM = "Sunshine Sky City CMS";
+const REALM = "Noble Crystal Riverside CMS";
 
 function unauthorized() {
   return new NextResponse("Yêu cầu xác thực để truy cập khu vực quản trị.", {

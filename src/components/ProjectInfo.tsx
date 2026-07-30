@@ -1,15 +1,13 @@
 const facts: { label: string; value: string }[] = [
-  { label: "Tên dự án", value: "Sunshine Sky City" },
-  { label: "Vị trí", value: "Đường Phú Thuận, Phường Tân Phú, Quận 7, TP. Hồ Chí Minh" },
-  { label: "Chủ đầu tư", value: "Sunshine Homes (Sunshine Group)" },
-  { label: "Đơn vị thi công", value: "Hòa Bình" },
-  { label: "Tư vấn giám sát", value: "Apave Châu Á Thái Bình Dương" },
-  { label: "Quy mô dự án", value: "Hơn 4,2 ha" },
-  { label: "Số tòa tháp", value: "9 tòa tháp cao 9 - 38 tầng" },
-  { label: "Loại hình sản phẩm", value: "Căn hộ, Sky Villa, Duplex, Penthouse, Văn phòng đa năng" },
-  { label: "Diện tích căn hộ", value: "50 - 117 m² (1 - 3 phòng ngủ)" },
-  { label: "Khởi công", value: "Quý 4/2018" },
-  { label: "Hình thức sở hữu", value: "Sổ hồng lâu dài (người Việt Nam) / 50 năm (người nước ngoài)" },
+  { label: "Tên dự án", value: "Noble Crystal Riverside" },
+  { label: "Vị trí", value: "Đường Đào Trí, Phường Phú Thuận, Quận 7, TP. Hồ Chí Minh" },
+  { label: "Phát triển bởi", value: "Sunshine Group" },
+  { label: "Số tầng", value: "37 tầng" },
+  { label: "Số căn / tầng điển hình", value: "10 căn (đơn nguyên C1 - C10)" },
+  { label: "Loại hình sản phẩm", value: "Căn hộ 2 - 3PN, Sky Villa & Sky Garden duplex 4 - 5PN" },
+  { label: "Diện tích căn hộ", value: "~104 - 155 m² thông thủy (2 - 3 phòng ngủ)" },
+  { label: "Diện tích Sky Villa", value: "~214 m² thông thủy, duplex 2 tầng" },
+  { label: "Không gian nghỉ dưỡng", value: "Hồ bơi vô cực & vườn cảnh quan hình số 8" },
 ];
 
 export function ProjectInfo() {

@@ -1,13 +1,13 @@
 "use client";
 
-import { Crown, Droplets, ShieldCheck, Smartphone } from "lucide-react";
+import { Building2, Crown, ShieldCheck, Waves } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
 import { asset, siteConfig } from "@/config/site";
 
 interface GoldValue {
-  icon: typeof Smartphone;
+  icon: typeof Waves;
   title: string;
   description: string;
   image: string;
@@ -15,31 +15,31 @@ interface GoldValue {
 
 const values: GoldValue[] = [
   {
-    icon: Smartphone,
-    title: "Sống thông minh thời thượng",
+    icon: Building2,
+    title: "Đón đầu hạ tầng khu Nam",
     description:
-      "Yếu tố \"Smart\" là trụ cột cốt lõi tại Sunshine Sky City. Căn hộ trang bị hệ thống IR Gateway điều khiển đèn, rèm cửa, quạt, TV, loa, điều hòa... chỉ bằng một chạm, mang đến trải nghiệm làm chủ cuộc sống thực thụ cho cư dân.",
+      "Giai đoạn 2026-2030, khu Nam Sài Gòn tăng tốc với cao tốc Bến Lức - Long Thành, Vành đai 3, cầu Thủ Thiêm 4, cầu Phú Mỹ 2 và tuyến Metro số 4 — hạ tầng đi trước, bất động sản tăng giá theo sau.",
     image: siteConfig.images.goldValues.smartHome,
   },
   {
-    icon: Droplets,
-    title: "Chuẩn sống xanh \"Resort\"",
+    icon: Waves,
+    title: "Không gian nghỉ dưỡng hình số 8",
     description:
-      "Lợi thế \"kế sông, cận thủy\" cùng khoảng 12.000 m² mặt nước từ hệ thống hồ điều hòa đan xen trong khuôn viên và mảng xanh trên các tầng cao, kiến tạo bầu không khí thoáng đãng hiếm có trong khu vực.",
+      "Toàn bộ khối đế được thiết kế theo hình số 8 độc bản, ôm trọn hồ bơi vô cực, vườn cảnh quan, sân tennis và quảng trường trung tâm — mang chuẩn sống resort vào ngay nội khu.",
     image: siteConfig.images.goldValues.greenLiving,
   },
   {
     icon: Crown,
-    title: "Nội thất hoàng kim",
+    title: "Sky Villa & Sky Garden thượng lưu",
     description:
-      "Đẳng cấp \"luxury\" thể hiện qua từng chi tiết mạ vàng tinh xảo đến từ những thương hiệu nội thất lừng danh thế giới — xứng tầm với những chủ nhân thành đạt của Sunshine Sky City.",
+      "Các tầng cao nhất dự án dành riêng cho dòng sản phẩm Sky Villa và Sky Garden duplex 2 tầng, tầm nhìn bao quát sông Sài Gòn và toàn cảnh khu Nam.",
     image: siteConfig.images.goldValues.luxuryInterior,
   },
   {
     icon: ShieldCheck,
-    title: "Hệ thống an ninh tuyệt đối",
+    title: "Đồng hành cùng Sunshine Group",
     description:
-      "Nhận diện gương mặt khi ra vào tòa nhà, hệ thống Intercom kết nối liên hoàn từ bãi đỗ xe, sảnh tiếp tân đến từng căn hộ, cùng đội ngũ bảo vệ túc trực 24/24.",
+      "Noble Crystal Riverside được phát triển bởi Sunshine Group, đi kèm chính sách bình ổn lãi suất, ưu đãi lãi suất 0% và hỗ trợ vay lên đến 70% giá trị hợp đồng.",
     image: siteConfig.images.goldValues.security,
   },
 ];
@@ -53,10 +53,10 @@ export function GoldValues() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-xs font-bold uppercase tracking-[0.3em] text-gold-400">
-            Giá trị vàng
+            Vì sao chọn Noble Crystal Riverside
           </span>
           <h2 className="mt-3 font-display text-2xl font-bold text-white sm:text-4xl">
-            4 Giá Trị Vàng Của Sunshine Sky City
+            4 Giá Trị Cốt Lõi Của Dự Án
           </h2>
         </div>
 

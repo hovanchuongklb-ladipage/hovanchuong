@@ -30,7 +30,8 @@ export const metadata: Metadata = {
   // Trailing slash matters: relative-URL resolution against a base URL
   // treats the base's last path segment as replaceable unless it ends in
   // "/" — without the slash, resolving a relative path here would drop
-  // the "/sunshine-sky-city" prefix entirely.
+  // siteConfig.basePath's segment entirely (currently "", so this is inert
+  // until the project moves under a subpath).
   metadataBase: new URL(`${siteConfig.url}/`),
   title: {
     default: siteConfig.seo.title,

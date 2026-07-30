@@ -25,3 +25,8 @@ npm-debug.log*
 next-env.d.ts
 .vercel
 .env*
+
+# raw reference material dropped into the project root (not project source —
+# the curated/renamed copies actually used by the site live under
+# public/images/noble-crystal-riverside/)
+/hinhanh noble/
