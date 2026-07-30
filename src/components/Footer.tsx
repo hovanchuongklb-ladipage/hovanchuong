@@ -1,19 +1,23 @@
 import { Facebook, Mail, MapPin, Phone, Youtube } from "lucide-react";
+import Image from "next/image";
 
-import { siteConfig } from "@/config/site";
+import { asset, siteConfig } from "@/config/site";
 
 export function Footer() {
   return (
     <footer id="lien-he" className="border-t border-white/10 bg-navy-950 py-12">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 md:grid-cols-3 lg:px-8">
         <div>
-          <div className="flex items-center gap-2">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-gold-400 font-display text-sm font-bold text-gold-400">
-              N
-            </span>
-            <span className="font-display text-lg font-bold text-white">
-              {siteConfig.name.toUpperCase()}
-            </span>
+          <div className="flex items-center gap-3">
+            <div className="relative h-11 w-44 shrink-0 rounded-lg bg-white px-2 py-1.5 shadow-sm">
+              <Image
+                src={asset("/images/noble-crystal-riverside/logo.png")}
+                alt={siteConfig.name}
+                width={160}
+                height={40}
+                className="h-full w-full object-contain object-left"
+              />
+            </div>
           </div>
           <p className="mt-4 text-sm leading-relaxed text-white/60">
             {siteConfig.description}

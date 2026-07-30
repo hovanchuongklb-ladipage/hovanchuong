@@ -55,11 +55,6 @@ export const siteConfig = {
   shortName: "Noble Crystal Riverside Quận 7",
   description:
     "Noble Crystal Riverside - Tổ hợp căn hộ 4.0 ven sông tại Nam Sài Gòn (Quận 7), phát triển bởi Sunshine Group. Không gian nghỉ dưỡng hình số 8 độc bản trên trục đường Đào Trí, liền kề Phú Mỹ Hưng.",
-  // No custom domain/deployment target has been provided for this project
-  // yet — basePath is empty (site lives at the domain root) and `url` is a
-  // placeholder. Update both together (plus next.config.mjs's basePath)
-  // once a real domain or Vercel URL exists; see CLAUDE.md "Deployment
-  // notes" for what else needs updating alongside these two.
   url: "https://noble-crystal-riverside.vercel.app",
   basePath: "",
   hotline: "0901440868",
@@ -72,8 +67,6 @@ export const siteConfig = {
   developer: "Sunshine Group",
   facebook: "https://facebook.com",
   youtube: "https://youtube.com",
-  // Top-to-bottom render order of the page sections inside <main> — see
-  // `sectionComponents` in src/app/page.tsx.
   layoutOrder: [
     "Hero",
     "ProjectInfo",
@@ -84,85 +77,66 @@ export const siteConfig = {
     "FloorPlan",
     "Pricing",
   ] as SectionKey[],
-  // Every local image path a component needs, grouped by the section that
-  // consumes it. All local paths point into
-  // public/images/noble-crystal-riverside/ — every file there is a real
-  // Noble Crystal Riverside asset (sourced from noblecrystalriverside.vn),
-  // no boilerplate placeholders. Several sections intentionally reuse the
-  // same handful of real images (there is no dedicated photo per amenity/
-  // gold-value yet) — see README.txt in that folder for the full mapping
-  // and what a follow-up photo drop should replace.
   images: {
-    hero: "/images/noble-crystal-riverside/tong-mat-bang.jpg",
-    location: "/images/noble-crystal-riverside/ha-tang-giao-thong.jpg",
+    hero: "/images/noble-crystal-riverside/hero-exterior.jpg",
+    location: "/images/noble-crystal-riverside/location-map.jpg",
     apartmentDesign: {
-      living: "/images/noble-crystal-riverside/layout-2pn.jpg",
-      kitchen: "/images/noble-crystal-riverside/layout-3pn.jpg",
+      living: "/images/noble-crystal-riverside/interior-3pn-1.jpg",
+      kitchen: "/images/noble-crystal-riverside/interior-3pn-5.jpg",
     },
-    pricing: "/images/noble-crystal-riverside/chiet-khau-thanh-toan.jpg",
+    pricing: "/images/noble-crystal-riverside/pricing-1.jpg",
     goldValues: {
-      smartHome: "/images/noble-crystal-riverside/ha-tang-giao-thong.jpg",
-      greenLiving: "/images/noble-crystal-riverside/tong-mat-bang.jpg",
-      luxuryInterior: "/images/noble-crystal-riverside/layout-5pn.jpg",
-      security: "/images/noble-crystal-riverside/chiet-khau-thanh-toan.jpg",
+      smartHome: "/images/noble-crystal-riverside/location-map.jpg",
+      greenLiving: "/images/noble-crystal-riverside/gold-scenery-1.jpg",
+      luxuryInterior: "/images/noble-crystal-riverside/interior-4pn-1.jpg",
+      security: "/images/noble-crystal-riverside/6-core-values.jpg",
     },
   },
-  // Array-based sections: each item is a self-contained card (icon key,
-  // copy, and its own image) so a section can hold any number of entries —
-  // adding/removing/reordering a card is purely a config edit, the
-  // components (Amenities.tsx, FloorPlan.tsx) just map over these arrays.
   sections: {
-    // No dedicated close-up amenity photography exists for this project yet
-    // (only the master site plan showing amenity zones A-L) — every card
-    // below temporarily shares tong-mat-bang.jpg until individual photos
-    // (pool, gym, retail, playground) are available.
     amenities: [
       {
         icon: "pool",
         title: "Hồ bơi vô cực hình số 8 độc bản",
         description:
           "Đường bơi vô cực uốn lượn hình số 8 xuyên suốt toàn khu, chuẩn nghỉ dưỡng resort ngay tại nội khu.",
-        image: "/images/noble-crystal-riverside/tong-mat-bang.jpg",
+        image: "/images/noble-crystal-riverside/amenity-pool.jpg",
       },
       {
         icon: "gym",
         title: "Sân tennis & khu thể thao ngoài trời",
         description:
           "Sân tennis tiêu chuẩn cùng các khu tập luyện ngoài trời bố trí xen kẽ mảng xanh cảnh quan.",
-        image: "/images/noble-crystal-riverside/tong-mat-bang.jpg",
+        image: "/images/noble-crystal-riverside/amenity-gym.jpg",
       },
       {
         icon: "park",
         title: "Vườn cảnh quan & hồ sinh thái nội khu",
         description:
           "Hệ thống hồ cảnh quan, vườn dạo bộ và tiểu cảnh trải dài theo toàn bộ trục hình số 8 của dự án.",
-        image: "/images/noble-crystal-riverside/tong-mat-bang.jpg",
+        image: "/images/noble-crystal-riverside/amenity-park.jpg",
       },
       {
         icon: "mall",
         title: "Quảng trường & khu thương mại nội khu",
         description:
           "Quảng trường trung tâm và các tiện ích thương mại – dịch vụ ngay chân đế, đáp ứng nhu cầu cư dân.",
-        image: "/images/noble-crystal-riverside/tong-mat-bang.jpg",
+        image: "/images/noble-crystal-riverside/amenity-mall.jpg",
       },
       {
         icon: "restaurant",
         title: "Khu vực sinh hoạt cộng đồng",
         description:
           "Không gian sinh hoạt chung, sân chơi trẻ em và khu vực thư giãn bố trí quanh các đảo cảnh quan A-L.",
-        image: "/images/noble-crystal-riverside/tong-mat-bang.jpg",
+        image: "/images/noble-crystal-riverside/amenity-community.jpg",
       },
       {
         icon: "security",
         title: "An ninh 24/7 khép kín toàn khu",
         description:
           "Hệ thống kiểm soát ra vào và an ninh 24/7 khép kín cho toàn bộ chu vi hình số 8 của dự án.",
-        image: "/images/noble-crystal-riverside/tong-mat-bang.jpg",
+        image: "/images/noble-crystal-riverside/amenity-security.jpg",
       },
     ] as AmenityItem[],
-    // Single typical floor plan (mặt bằng điển hình) — this project is one
-    // continuous block (unit codes C1-C10), not multiple named towers like
-    // the base boilerplate's S2/S3/S4, so there is only one entry here.
     floorPlans: [
       {
         id: "dien-hinh",
@@ -177,9 +151,6 @@ export const siteConfig = {
         ],
       },
     ] as FloorPlanItem[],
-    // Individual apartment layouts (mặt bằng theo loại căn hộ). `image` is
-    // the 3D floor-plan render; `gallery` holds real staged interior photos
-    // (empty for all four here — none provided yet for this project).
     apartmentTypes: [
       {
         id: "2pn",
@@ -187,7 +158,14 @@ export const siteConfig = {
         image: "/images/noble-crystal-riverside/layout-2pn.jpg",
         areaThongThuy: "104,4 ~ 116,6 m²",
         areaTimTuong: "116,2 ~ 129,0 m²",
-        gallery: [],
+        gallery: [
+          "/images/noble-crystal-riverside/interior-2pn-1.jpg",
+          "/images/noble-crystal-riverside/interior-2pn-2.jpg",
+          "/images/noble-crystal-riverside/interior-2pn-3.jpg",
+          "/images/noble-crystal-riverside/interior-2pn-4.jpg",
+          "/images/noble-crystal-riverside/interior-2pn-5.jpg",
+          "/images/noble-crystal-riverside/interior-2pn-6.jpg",
+        ],
       },
       {
         id: "3pn",
@@ -195,7 +173,14 @@ export const siteConfig = {
         image: "/images/noble-crystal-riverside/layout-3pn.jpg",
         areaThongThuy: "141,0 ~ 141,9 m²",
         areaTimTuong: "155,0 m²",
-        gallery: [],
+        gallery: [
+          "/images/noble-crystal-riverside/interior-3pn-1.jpg",
+          "/images/noble-crystal-riverside/interior-3pn-2.jpg",
+          "/images/noble-crystal-riverside/interior-3pn-3.jpg",
+          "/images/noble-crystal-riverside/interior-3pn-4.jpg",
+          "/images/noble-crystal-riverside/interior-3pn-5.jpg",
+          "/images/noble-crystal-riverside/interior-3pn-6.jpg",
+        ],
       },
       {
         id: "4pn",
@@ -203,7 +188,13 @@ export const siteConfig = {
         image: "/images/noble-crystal-riverside/layout-4pn.jpg",
         areaThongThuy: "214,3 m² (2 tầng)",
         areaTimTuong: "252,0 m²",
-        gallery: [],
+        gallery: [
+          "/images/noble-crystal-riverside/interior-4pn-1.jpg",
+          "/images/noble-crystal-riverside/interior-4pn-2.jpg",
+          "/images/noble-crystal-riverside/interior-4pn-3.jpg",
+          "/images/noble-crystal-riverside/interior-4pn-4.jpg",
+          "/images/noble-crystal-riverside/interior-4pn-5.jpg",
+        ],
       },
       {
         id: "5pn",
@@ -214,10 +205,6 @@ export const siteConfig = {
         gallery: [],
       },
     ] as ApartmentTypeItem[],
-    // Per-floor-range floor plates (mặt bằng tầng) — one continuous block,
-    // so every entry shares the same `tower` label; `floorRange` is what
-    // distinguishes each card. Floors 35-37 are the Sky Garden / Sky Villa
-    // levels at the top of the building.
     towerFloorPlates: [
       {
         id: "tang2-5",
@@ -264,10 +251,7 @@ export const siteConfig = {
       "Sky Villa Quận 7",
       "bảng giá Noble Crystal Riverside",
     ],
-    // Full absolute URL (not a root-relative path) — see asset()/basePath
-    // note below; update once a real domain replaces the Vercel placeholder
-    // above.
-    ogImage: "https://noble-crystal-riverside.vercel.app/images/noble-crystal-riverside/tong-mat-bang.jpg",
+    ogImage: "https://noble-crystal-riverside.vercel.app/images/noble-crystal-riverside/hero-exterior.jpg",
   },
   nav: [
     { label: "Tổng quan", href: "#tong-quan" },
@@ -282,16 +266,6 @@ export const siteConfig = {
 
 export type SiteConfig = typeof siteConfig;
 
-/**
- * Prefixes a root-relative local path (e.g. "/images/hero.jpg") with the
- * app's basePath. Next.js auto-prefixes `next/link` hrefs, but NOT
- * `next/image` `src` values for local images — those must be prefixed
- * manually, or the image optimizer's internal lookup 404s once basePath is
- * set. Absolute URLs (external images, e.g. Unsplash placeholders) are
- * returned unchanged. With `basePath: ""` this is currently a no-op, but
- * every local image still goes through it so nothing breaks if this project
- * later moves under a subpath.
- */
 export function asset(path: string): string {
   if (/^https?:\/\//.test(path)) {
     return path;

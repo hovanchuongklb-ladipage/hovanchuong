@@ -1,9 +1,10 @@
 "use client";
 
 import { Menu, Phone, X } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
-import { siteConfig } from "@/config/site";
+import { asset, siteConfig } from "@/config/site";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -58,13 +59,15 @@ export function Header() {
           className="flex items-center gap-2"
           aria-label={siteConfig.name}
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-full border border-gold-400 text-sm font-display font-bold text-gold-400 sm:h-11 sm:w-11">
-            N
-          </span>
-          <span className="font-display text-sm font-bold leading-tight tracking-wide text-white sm:text-lg">
-            NOBLE CRYSTAL
-            <br className="sm:hidden" /> RIVERSIDE
-          </span>
+          <div className="relative h-9 w-36 shrink-0 rounded-lg bg-white px-2 py-1.5 shadow-sm sm:h-11 sm:w-44">
+            <Image
+              src={asset("/images/noble-crystal-riverside/logo.png")}
+              alt={siteConfig.name}
+              fill
+              sizes="(max-width: 640px) 144px, 176px"
+              className="object-contain object-left"
+            />
+          </div>
         </a>
 
         <nav className="hidden items-center gap-1 lg:flex">
