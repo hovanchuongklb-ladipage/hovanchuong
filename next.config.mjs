@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // No custom domain assigned yet — deploys to its default Vercel URL at
-  // the domain root, so basePath is empty. If this project later moves
-  // under a subpath (its own domain + prefix, or a gateway rewrite like the
-  // base boilerplate), set this to match siteConfig.basePath.
-  basePath: "",
+  // Standalone deployment on its own domain (hovanchuong.site) — no
+  // gateway/rewrite project involved. basePath keeps the site at
+  // /noble-crystal-riverside rather than the domain root. Must always
+  // match siteConfig.basePath in src/config/site.ts.
+  basePath: "/noble-crystal-riverside",
   images: {
     remotePatterns: [
       {

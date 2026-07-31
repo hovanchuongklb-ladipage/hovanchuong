@@ -55,8 +55,10 @@ export const siteConfig = {
   shortName: "Noble Crystal Riverside Quận 7",
   description:
     "Noble Crystal Riverside - Tổ hợp căn hộ 4.0 ven sông tại Nam Sài Gòn (Quận 7), phát triển bởi Sunshine Group. Không gian nghỉ dưỡng hình số 8 độc bản trên trục đường Đào Trí, liền kề Phú Mỹ Hưng.",
-  url: "https://noble-crystal-riverside.vercel.app",
-  basePath: "",
+  // Standalone domain, no gateway/rewrite project involved — see CLAUDE.md
+  // "Domain architecture". Keep this in sync with next.config.mjs's basePath.
+  url: "https://hovanchuong.site/noble-crystal-riverside",
+  basePath: "/noble-crystal-riverside",
   hotline: "0901440868",
   hotlineDisplay: "0901.440.868",
   zaloNumber: "0901440868",
@@ -251,7 +253,10 @@ export const siteConfig = {
       "Sky Villa Quận 7",
       "bảng giá Noble Crystal Riverside",
     ],
-    ogImage: "https://noble-crystal-riverside.vercel.app/images/noble-crystal-riverside/hero-exterior.jpg",
+    // Full absolute URL (not root-relative) — a leading "/" here would
+    // resolve against the domain root and drop the /noble-crystal-riverside
+    // prefix when combined with metadataBase.
+    ogImage: "https://hovanchuong.site/noble-crystal-riverside/images/noble-crystal-riverside/hero-exterior.jpg",
   },
   nav: [
     { label: "Tổng quan", href: "#tong-quan" },
