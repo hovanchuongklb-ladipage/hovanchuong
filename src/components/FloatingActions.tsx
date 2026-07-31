@@ -2,11 +2,13 @@
 
 import { Phone } from "lucide-react";
 
+import { InfoPopup } from "@/components/InfoPopup";
 import { siteConfig } from "@/config/site";
 
 export function FloatingActions() {
   return (
     <div className="fixed inset-x-0 bottom-4 z-40 flex items-center justify-center gap-4 px-4 sm:inset-x-auto sm:bottom-6 sm:right-6 sm:justify-end">
+      <InfoPopup />
       <a
         href={siteConfig.zaloLink}
         target="_blank"
